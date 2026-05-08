@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
-import { Bricolage_Grotesque } from "next/font/google";
+import { Crimson_Text, Nunito } from "next/font/google";
 import "./globals.css";
 
-const font = Bricolage_Grotesque({
+const serif = Crimson_Text({
+  subsets: ["latin"],
+  variable: "--font-crimson",
+  weight: ["400", "600", "700"],
+});
+const sans = Nunito({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
 });
@@ -20,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={font.className}>{children}</body>
+      <body className={sans.className + " " + serif.variable}>{children}</body>
     </html>
   );
 }

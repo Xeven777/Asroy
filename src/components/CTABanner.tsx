@@ -37,9 +37,7 @@ export default function CTABanner() {
           </div>
 
           {/* CTA */}
-          <Button
-            className="shrink-0 bg-trust-green hover:bg-trust-green-light text-white gap-2 px-8 py-6 text-base rounded-full font-bold shadow-lg shadow-trust-green/30 transition-all duration-300 hover:shadow-trust-green-light/40 hover:scale-105"
-          >
+          <Button variant="secondary" size="lg" className="shrink-0 hover:scale-105">
             <Heart className="w-5 h-5 fill-white stroke-0" />
             Donate Now
           </Button>

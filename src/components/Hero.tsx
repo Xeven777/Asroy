@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { ArrowRight, PlayCircle, Users, Briefcase, Heart } from "lucide-react";
+import { ArrowRight, Play, Users, Briefcase, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import heroImage from "@/assets/hero.webp";
 
 const stats = [
   { icon: Users, value: "10K+", label: "Lives Impacted" },
@@ -12,68 +13,76 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden bg-gradient-to-br from-white via-trust-blue-pale/30 to-trust-green-pale/20 py-16 md:py-20 lg:py-24"
+      className="relative overflow-hidden bg-gradient-to-br min-h-screen"
     >
-      {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-trust-green-pale/40 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-trust-blue-pale/30 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <Image
+        src={heroImage}
+        alt="Children running joyfully — Asroy Welfare Trust empowers underprivileged communities"
+        width={1200}
+        height={900}
+        className="object-cover hidden md:block md:object-left absolute inset-0 h-full w-full brightness-120 saturate-110"
+        priority
+        loading="eager"
+        placeholder="blur"
+      />
+      <div className="absolute bg-white inset-0 mask-r-from-30% mask-r-to-60% hidden md:block"></div>
+      <div className="relative mx-auto px-4 sm:px-12 pt-12 pb-24 sm:pt-16 lg:pt-20 lg:pb-32">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.2fr_1fr] lg:gap-12 xl:gap-16">
           {/* Left – Text */}
-          <div className="flex flex-col gap-6 order-2 lg:order-1">
+          <div className="flex flex-col gap-7 order-2 lg:order-1">
             {/* Tag */}
-            <div className="inline-flex items-center gap-2 self-start">
-              <span className="h-px w-8 bg-trust-green" />
-              <span className="text-trust-green font-semibold text-sm tracking-wide">
+            <div className="inline-flex items-center gap-2 self-start rounded-full bg-white/70 px-4 py-1.5 ring-1 ring-trust-green/15 backdrop-blur-sm shadow-sm">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-trust-green opacity-60" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-trust-green" />
+              </span>
+              <span className="text-trust-green font-semibold text-xs sm:text-sm tracking-wide">
                 Together, We Can Build a Better Tomorrow
               </span>
             </div>
 
             {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-trust-navy">
-              Empowering Lives.{" "}
-              <span className="text-trust-green">Building Hope.</span>
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight text-trust-navy font-crimson">
+              Empowering Lives.
+              <br />
+              <span className="bg-gradient-to-r from-trust-green to-trust-green-light bg-clip-text text-transparent">
+                Building Hope.
+              </span>
             </h1>
 
             {/* Description */}
-            <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-lg">
+            <p className="max-w-xl text-base leading-relaxed text-gray-600 md:text-lg">
               Asroy Welfare Trust works for the upliftment of underprivileged
               communities through education, healthcare, and sustainable
               development initiatives.
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-wrap gap-3">
-              <Button
-                className="bg-trust-navy hover:bg-trust-navy/90 text-white gap-2 px-6 h-11 rounded-full font-semibold shadow-md"
-                asChild
-              >
+            <div className="flex flex-wrap items-center gap-3">
+              <Button asChild className="group">
                 <a href="#work">
-                  Explore Our Work <ArrowRight className="w-4 h-4" />
+                  Explore Our Work
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </a>
               </Button>
-              <Button
-                variant="outline"
-                className="border-trust-navy text-trust-navy hover:bg-trust-navy/5 gap-2 px-6 h-11 rounded-full font-semibold"
-              >
-                <PlayCircle className="w-4 h-4 text-trust-green" />
-                Watch Our Story
-              </Button>
+              <Button variant="secondary">Donate</Button>
             </div>
 
             {/* Stats */}
-            <div className="flex flex-wrap gap-8 pt-4 border-t border-gray-200">
+            <div className="mt-2 grid grid-cols-3 gap-3 sm:gap-4 rounded-2xl border border-white/70 bg-white/60 p-3 sm:p-4 shadow-sm backdrop-blur-sm">
               {stats.map(({ icon: Icon, value, label }) => (
-                <div key={label} className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-trust-green-pale flex items-center justify-center shrink-0">
-                    <Icon className="w-5 h-5 text-trust-green" />
+                <div
+                  key={label}
+                  className="flex items-center gap-2.5 sm:gap-3 rounded-xl px-2 py-1.5 sm:px-3 sm:py-2 transition hover:bg-white"
+                >
+                  <div className="flex h-9 w-9 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-trust-green to-trust-green-light shadow-md shadow-trust-green/30">
+                    <Icon className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
                   </div>
-                  <div>
-                    <p className="font-bold text-trust-navy text-xl leading-none">
+                  <div className="min-w-0">
+                    <p className="text-lg sm:text-2xl font-extrabold leading-none text-trust-navy">
                       {value}
                     </p>
-                    <p className="text-xs text-muted-foreground mt-0.5">
+                    <p className="mt-1 truncate text-[10px] sm:text-xs font-medium text-gray-500">
                       {label}
                     </p>
                   </div>
@@ -83,56 +92,57 @@ export default function Hero() {
           </div>
 
           {/* Right – Image */}
-          <div className="relative flex items-center justify-center order-1 lg:order-2">
-            {/* Decorative ring */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-80 h-80 md:w-96 md:h-96 rounded-full border-4 border-dashed border-trust-green/20" />
-            </div>
-
-            {/* Leaf decorations */}
-            <div className="absolute top-4 right-8 text-trust-green opacity-60">
-              <svg viewBox="0 0 40 50" className="w-8 h-10" fill="currentColor">
-                <path d="M20 2 C12 2 4 10 4 25 C4 38 12 48 20 48 C28 48 36 38 36 25 C36 10 28 2 20 2Z" />
-              </svg>
-            </div>
-            <div className="absolute top-10 right-4 text-trust-green-light opacity-40">
-              <svg viewBox="0 0 24 30" className="w-5 h-6" fill="currentColor">
-                <path d="M12 1 C7 1 2 6 2 15 C2 22 7 29 12 29 C17 29 22 22 22 15 C22 6 17 1 12 1Z" />
-              </svg>
-            </div>
-            <div className="absolute bottom-8 left-4 text-trust-green opacity-50">
-              <svg viewBox="0 0 40 50" className="w-7 h-9" fill="currentColor">
-                <path d="M20 2 C12 2 4 10 4 25 C4 38 12 48 20 48 C28 48 36 38 36 25 C36 10 28 2 20 2Z" />
-              </svg>
-            </div>
-
-            {/* Main image */}
-            <div className="relative w-72 h-80 md:w-80 md:h-96 rounded-[40%_60%_60%_40%/40%_40%_60%_60%] overflow-hidden shadow-2xl border-4 border-white">
+          <div className="relative order-1 lg:order-2 md:hidden">
+            <div className="relative aspect-5/4 sm:aspect-[16/11] w-full overflow-hidden rounded-3xl shadow-2xl ring-1 ring-black/5">
               <Image
-                src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&q=80&auto=format&fit=crop"
-                alt="Children benefiting from Asroy Welfare Trust programs"
+                src={heroImage}
+                alt="Children running joyfully — Asroy Welfare Trust empowers underprivileged communities"
                 fill
-                className="object-cover"
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover object-right brightness-110"
                 priority
+                placeholder="blur"
               />
             </div>
 
-            {/* Floating join card */}
-            <div className="absolute bottom-4 right-0 md:right-4 bg-white rounded-2xl shadow-xl px-4 py-3 flex items-center gap-3 max-w-[200px] border border-gray-100">
-              <div className="w-10 h-10 rounded-full bg-trust-navy flex items-center justify-center shrink-0">
-                <Heart className="w-5 h-5 text-white fill-white" />
+            <div className="absolute bottom-2 right-2 sm:bottom-6 sm:right-6 flex items-center gap-3 rounded-2xl bg-trust-navy px-4 py-3 sm:px-5 sm:py-4 text-white shadow-xl shadow-trust-navy/30 ring-1 ring-white/10">
+              <div className="flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-xl bg-white/15 backdrop-blur-sm">
+                <Heart className="h-5 w-5 fill-white text-white" />
               </div>
-              <div>
-                <p className="text-xs font-semibold text-gray-700 leading-snug">
-                  Be the reason for someone&apos;s smile
+              <div className="leading-tight">
+                <p className="text-[11px] sm:text-xs font-medium text-white/80">
+                  Be the reason
+                  <br className="hidden sm:block" /> for someone&apos;s smile
                 </p>
-                <p className="text-trust-green text-sm font-bold italic mt-0.5">
+                <p className="mt-1 text-base sm:text-lg font-bold italic text-trust-green-light">
                   Join Us Today!
                 </p>
               </div>
+              <Heart className="absolute -top-2 -right-2 h-5 w-5 fill-trust-green-light text-trust-green-light drop-shadow" />
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Bottom green wave */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 -z-0">
+        <svg
+          viewBox="0 0 1440 120"
+          preserveAspectRatio="none"
+          className="block h-20 w-full sm:h-54"
+          aria-hidden="true"
+        >
+          <path
+            d="M0,64 C240,120 480,16 720,40 C960,64 1200,112 1440,72 L1440,120 L0,120 Z"
+            fill="url(#hero-wave)"
+          />
+          <defs>
+            <linearGradient id="hero-wave" x1="0" x2="1" y1="0" y2="0">
+              <stop offset="0%" stopColor="#4caf50" />
+              <stop offset="100%" stopColor="#2e7d32" />
+            </linearGradient>
+          </defs>
+        </svg>
       </div>
     </section>
   );

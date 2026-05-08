@@ -86,7 +86,7 @@ export default function Gallery() {
 
         {/* CTA */}
         <div className="flex justify-center mt-8">
-          <Button className="bg-trust-navy hover:bg-trust-navy/90 text-white gap-2 px-8 rounded-full font-semibold">
+          <Button>
             View More Photos <ArrowRight className="w-4 h-4" />
           </Button>
         </div>

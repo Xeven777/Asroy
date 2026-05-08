@@ -1,11 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { Heart, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About Us", href: "#about" },
@@ -17,50 +15,14 @@ const navLinks = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 10);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
-    <nav
-      className={cn(
-        "sticky top-0 z-50 bg-white transition-shadow duration-300",
-        scrolled ? "shadow-md" : "shadow-sm"
-      )}
-    >
+    <nav className="sticky top-0 z-50 bg-white/70 backdrop-blur-lg transition-all duration-300 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="#home" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-full flex items-center justify-center bg-trust-green-pale shrink-0">
-              <svg
-                viewBox="0 0 40 40"
-                className="w-9 h-9"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle cx="20" cy="20" r="20" fill="#e8f5e9" />
-                {/* Leaf */}
-                <path
-                  d="M20 8 C14 8 9 14 9 22 C9 28 14 33 20 34 C26 33 31 28 31 22 C31 14 26 8 20 8Z"
-                  fill="#2e7d32"
-                  opacity="0.85"
-                />
-                {/* Small figure */}
-                <circle cx="20" cy="16" r="3" fill="white" />
-                <path
-                  d="M14 28 Q17 22 20 21 Q23 22 26 28"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  fill="none"
-                />
-              </svg>
-            </div>
+            <div className="w-10 h-10 rounded-full flex items-center justify-center bg-trust-green shrink-0"></div>
             <div className="leading-tight">
               <p className="font-bold text-trust-navy text-lg leading-none tracking-tight">
                 Asroy
@@ -87,10 +49,7 @@ export default function Navbar() {
 
           {/* Donate CTA */}
           <div className="hidden lg:flex">
-            <Button
-              className="bg-trust-green hover:bg-trust-green/90 text-white gap-2 px-5 rounded-full font-semibold shadow-sm"
-              size="default"
-            >
+            <Button variant="secondary" size="sm">
               <Heart className="w-4 h-4 fill-white stroke-0" />
               Donate Now
             </Button>
@@ -122,7 +81,7 @@ export default function Navbar() {
               </Link>
             ))}
             <div className="pt-2 pb-3">
-              <Button className="w-full bg-trust-green hover:bg-trust-green/90 text-white gap-2 rounded-full font-semibold">
+              <Button variant="secondary" className="w-full">
                 <Heart className="w-4 h-4 fill-white stroke-0" />
                 Donate Now
               </Button>

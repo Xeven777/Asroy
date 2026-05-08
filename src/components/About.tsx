@@ -54,10 +54,7 @@ export default function About() {
               left behind in the journey toward a better tomorrow.
             </p>
 
-            <Button
-              className="self-start bg-trust-green hover:bg-trust-green/90 text-white gap-2 px-6 rounded-full font-semibold"
-              asChild
-            >
+            <Button variant="secondary" className="self-start" asChild>
               <a href="#work">
                 Know More About Us <ArrowRight className="w-4 h-4" />
               </a>
