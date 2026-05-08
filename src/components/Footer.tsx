@@ -85,7 +85,9 @@ export default function Footer() {
                 </svg>
               </div>
               <div className="leading-tight">
-                <p className="font-bold text-white text-lg leading-none">Asroy</p>
+                <p className="font-bold text-white text-lg leading-none">
+                  Asroy
+                </p>
                 <p className="text-[10px] text-white/60 tracking-widest uppercase">
                   Welfare Trust
                 </p>
@@ -177,7 +179,15 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 py-5 text-xs text-white/50">
           <p className="flex items-center gap-1">
-            © 2024 Asroy Welfare Trust. All Rights Reserved. Made with{" "}
+            © 2026 Asroy Welfare Trust. Made by{" "}
+            <a
+              href="http://auradevs.co"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              AuraDevs
+            </a>{" "}
             <Heart className="w-3 h-3 text-red-400 fill-red-400" />
           </p>
           <div className="flex gap-4">
