@@ -1,4 +1,4 @@
-import { Award, BadgeCheck, ShieldCheck, Leaf, Building2 } from "lucide-react";
+import { Award, BadgeCheck, Leaf, Building2, LeafIcon } from "lucide-react";
 
 const certs = [
   {
@@ -38,29 +38,18 @@ const certs = [
   },
 ];
 
-function SectionLeaf() {
-  return (
-    <svg viewBox="0 0 20 24" className="w-4 h-5 text-trust-green" fill="currentColor">
-      <path d="M10 1C6 1 2 5 2 12C2 18 6 23 10 23C14 23 18 18 18 12C18 5 14 1 10 1Z" />
-    </svg>
-  );
-}
-
 export default function Certifications() {
   return (
-    <section
-      id="certifications"
-      className="py-16 md:py-24 bg-gray-50"
-    >
+    <section id="certifications" className="py-16 md:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-2">
-            <SectionLeaf />
-            <span className="text-trust-green font-bold text-sm tracking-widest uppercase">
+            <LeafIcon className="-scale-x-100 fill-trust-green text-trust-green" />
+            <span className="text-trust-navy font-bold md:text-4xl font-crimson">
               Certifications &amp; Recognitions
             </span>
-            <SectionLeaf />
+            <LeafIcon className="fill-trust-green text-trust-green" />
           </div>
           <p className="text-muted-foreground text-sm">
             Our commitment to transparency and excellence
@@ -80,7 +69,9 @@ export default function Certifications() {
                 {cert.icon}
               </div>
               <div className="text-center">
-                <p className={`font-bold text-base leading-tight ${cert.color}`}>
+                <p
+                  className={`font-bold text-base leading-tight ${cert.color}`}
+                >
                   {cert.title}
                 </p>
                 <p className="text-xs text-muted-foreground mt-0.5">

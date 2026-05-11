@@ -36,7 +36,7 @@ export default function About() {
               </span>
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-extrabold text-trust-navy leading-snug">
+            <h2 className="text-3xl md:text-5xl tracking-tight font-extrabold text-trust-navy leading-snug font-crimson">
               We Believe in Humanity and Service
             </h2>
 
@@ -67,7 +67,7 @@ export default function About() {
               {aboutImages.map((img, i) => (
                 <div
                   key={i}
-                  className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md"
+                  className="relative aspect-4/3 rounded-2xl overflow-hidden shadow-md"
                 >
                   <Image
                     src={img.src}
@@ -84,7 +84,9 @@ export default function About() {
               <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center mx-auto mb-2">
                 <Target className="w-5 h-5 text-white" />
               </div>
-              <p className="font-bold text-sm leading-tight mb-1">Our Mission</p>
+              <p className="font-bold text-sm leading-tight mb-1">
+                Our Mission
+              </p>
               <p className="text-xs text-white/80 leading-snug">
                 To empower individuals and communities by providing resources,
                 education, and opportunities for a better life.

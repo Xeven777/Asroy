@@ -4,16 +4,16 @@ import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero.webp";
 
 const stats = [
-  { icon: Users, value: "10K+", label: "Lives Impacted" },
-  { icon: Briefcase, value: "50+", label: "Projects" },
-  { icon: Heart, value: "100+", label: "Volunteers" },
+  { icon: Users, value: "800+", label: "Lives Impacted" },
+  { icon: Briefcase, value: "20+", label: "Projects" },
+  { icon: Heart, value: "40+", label: "Volunteers" },
 ];
 
 export default function Hero() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden bg-gradient-to-br min-h-screen"
+      className="relative overflow-hidden bg-linear-to-br min-h-screen"
     >
       <Image
         src={heroImage}
@@ -37,24 +37,24 @@ export default function Hero() {
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-trust-green" />
               </span>
               <span className="text-trust-green font-semibold text-xs sm:text-sm tracking-wide">
-                Together, We Can Build a Better Tomorrow
+                A Supriyo Roy Foundation Initiative
               </span>
             </div>
 
             {/* Headline */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight text-trust-navy font-crimson">
-              Empowering Lives.
+              Together we build
               <br />
-              <span className="bg-gradient-to-r from-trust-green to-trust-green-light bg-clip-text text-transparent">
-                Building Hope.
+              <span className="bg-linear-to-r from-trust-green to-trust-green-light bg-clip-text text-transparent">
+                a brighter future
               </span>
             </h1>
 
             {/* Description */}
-            <p className="max-w-xl text-base leading-relaxed text-gray-600 md:text-lg">
-              Asroy Welfare Trust works for the upliftment of underprivileged
-              communities through education, healthcare, and sustainable
-              development initiatives.
+            <p className="max-w-lg text-balance text-base leading-relaxed text-gray-600 md:text-lg">
+              Asroy Welfare Trust stands beside struggling communities, bringing
+              hope through education, healthcare, care, support, and brighter
+              opportunities.
             </p>
 
             {/* CTAs */}
@@ -65,17 +65,23 @@ export default function Hero() {
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </a>
               </Button>
-              <Button variant="secondary">Donate</Button>
+              <a
+                href="http://wa.me/9732643449?text=I%20would%20like%20to%20know%20more%20about%20Asroy%20Welfare%20Trust's%20work%20and%20how%20I%20can%20contribute."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button variant="secondary">Donate</Button>
+              </a>
             </div>
 
             {/* Stats */}
-            <div className="mt-2 grid grid-cols-3 gap-3 sm:gap-4 rounded-2xl border border-white/70 bg-white/60 p-3 sm:p-4 shadow-sm backdrop-blur-sm">
+            <div className="mt-2 grid grid-cols-3 gap-3 sm:gap-4 rounded-2xl border border-white/70 bg-white/60 p-3 sm:p-4 shadow-sm backdrop-blur-sm max-w-2xl">
               {stats.map(({ icon: Icon, value, label }) => (
                 <div
                   key={label}
                   className="flex items-center gap-2.5 sm:gap-3 rounded-xl px-2 py-1.5 sm:px-3 sm:py-2 transition hover:bg-white"
                 >
-                  <div className="flex h-9 w-9 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-trust-green to-trust-green-light shadow-md shadow-trust-green/30">
+                  <div className="flex h-9 w-9 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-full bg-linear-to-br from-trust-green to-trust-green-light shadow-md shadow-trust-green/30">
                     <Icon className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
                   </div>
                   <div className="min-w-0">
@@ -93,7 +99,7 @@ export default function Hero() {
 
           {/* Right – Image */}
           <div className="relative order-1 lg:order-2 md:hidden">
-            <div className="relative aspect-5/4 sm:aspect-[16/11] w-full overflow-hidden rounded-3xl shadow-2xl ring-1 ring-black/5">
+            <div className="relative aspect-5/4 sm:aspect-16/11 w-full overflow-hidden rounded-3xl shadow-2xl ring-1 ring-black/5">
               <Image
                 src={heroImage}
                 alt="Children running joyfully — Asroy Welfare Trust empowers underprivileged communities"
@@ -125,7 +131,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom green wave */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 -z-0">
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-0">
         <svg
           viewBox="0 0 1440 120"
           preserveAspectRatio="none"

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Heart, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About Us", href: "#about" },
@@ -21,13 +22,19 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href="#home" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-full flex items-center justify-center bg-trust-green shrink-0"></div>
+          <Link href="/" className="flex items-center gap-3 group">
+            <Image
+              src="/logo1.webp"
+              alt="Asroy Welfare Trust Logo"
+              width={52}
+              height={52}
+              className="size-14 rounded-full"
+            />
             <div className="leading-tight">
               <p className="font-bold text-trust-navy text-lg leading-none tracking-tight">
                 Asroy
               </p>
-              <p className="text-[10px] text-muted-foreground tracking-widest uppercase font-medium">
+              <p className="text-[10px] text-muted-foreground uppercase font-medium">
                 Welfare Trust
               </p>
             </div>
