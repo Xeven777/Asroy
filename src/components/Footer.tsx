@@ -96,7 +96,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-3.5">
               <li className="flex items-start gap-3">
                 <Phone className="w-4 h-4 text-trust-green-light mt-0.5 shrink-0" />
-                <span className="text-white/70 text-sm">+91 98765 43210</span>
+                <span className="text-white/70 text-sm">+91 80017 32493</span>
               </li>
               <li>
                 <a
@@ -112,7 +112,7 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-trust-green-light mt-0.5 shrink-0" />
                 <span className="text-white/70 text-sm">
-                  123, Hope Street, New Delhi, India – 110001
+                  Indira Pally, Raghunathganj, Murshidabad, PIN - 742225
                 </span>
               </li>
             </ul>
