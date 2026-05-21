@@ -4,6 +4,7 @@ import About from "@/components/About";
 import Certifications from "@/components/Certifications";
 import WhatWeDo from "@/components/WhatWeDo";
 import Gallery from "@/components/Gallery";
+import Team from "@/components/Team";
 import CTABanner from "@/components/CTABanner";
 import Footer from "@/components/Footer";
 
@@ -16,6 +17,7 @@ export default function Home() {
       <Certifications />
       <WhatWeDo />
       <Gallery />
+      <Team />
       <CTABanner />
       <Footer />
     </main>

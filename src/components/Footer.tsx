@@ -22,11 +22,11 @@ const programs = [
 export default function Footer() {
   return (
     <footer id="contact" className="bg-trust-navy-dark text-white">
-      <div className="x-4 sm:px-12 mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main footer */}
-        <div className="flex gap-10 md:gap-20 py-14 border-b border-white/10">
+        <div className="grid grid-cols-2 gap-x-8 gap-y-10 py-12 sm:grid-cols-2 md:py-14 lg:grid-cols-12 lg:gap-10 border-b border-white/10">
           {/* Brand column */}
-          <div className="flex flex-col gap-4">
+          <div className="col-span-2 flex flex-col gap-4 lg:col-span-4">
             <div className="flex items-center gap-3">
               <Image
                 src="/logo1.webp"
@@ -51,7 +51,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="ml-auto">
+          <div className="lg:col-span-2">
             <h4 className="text-white font-bold text-sm uppercase tracking-widest mb-4">
               Quick Links
             </h4>
@@ -70,7 +70,7 @@ export default function Footer() {
           </div>
 
           {/* Our Programs */}
-          <div>
+          <div className="lg:col-span-2">
             <h4 className="text-white font-bold text-sm uppercase tracking-widest mb-4">
               Our Programs
             </h4>
@@ -89,7 +89,7 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div>
+          <div className="col-span-2 sm:col-span-2 lg:col-span-4">
             <h4 className="text-white font-bold text-sm uppercase tracking-widest mb-4">
               Contact Us
             </h4>
@@ -132,15 +132,6 @@ export default function Footer() {
             </a>{" "}
             <Heart className="w-3 h-3 text-red-400 fill-red-400" />
           </p>
-          <div className="flex gap-4">
-            <Link href="#" className="hover:text-white transition-colors">
-              Privacy Policy
-            </Link>
-            <span>|</span>
-            <Link href="#" className="hover:text-white transition-colors">
-              Terms &amp; Conditions
-            </Link>
-          </div>
         </div>
       </div>
     </footer>

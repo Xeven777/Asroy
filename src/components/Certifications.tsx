@@ -46,7 +46,7 @@ export default function Certifications() {
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-2">
             <LeafIcon className="-scale-x-100 fill-trust-green text-trust-green" />
-            <span className="text-trust-navy font-bold md:text-4xl font-crimson">
+            <span className="text-trust-navy font-bold text-2xl md:text-4xl font-crimson">
               Certifications &amp; Recognitions
             </span>
             <LeafIcon className="fill-trust-green text-trust-green" />
