@@ -7,45 +7,55 @@ const programs = [
     iconBg: "bg-blue-500",
     title: "Education",
     description:
-      "Providing quality education and skill development opportunities for children and youth.",
+      "Providing quality education and skill development opportunities for children and youth in Murshidabad.",
     image:
       "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&q=80&auto=format&fit=crop",
+    imageAlt:
+      "Education program by Asroy Welfare Trust NGO for children in Murshidabad, West Bengal",
   },
   {
     icon: Stethoscope,
     iconBg: "bg-red-500",
     title: "Healthcare",
     description:
-      "Organizing health camps and making healthcare accessible to those in need.",
+      "Organizing free health camps and making healthcare accessible to underprivileged families in West Bengal.",
     image:
       "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&q=80&auto=format&fit=crop",
+    imageAlt:
+      "Free healthcare camp organized by Asroy NGO in Murshidabad, West Bengal",
   },
   {
     icon: Users,
     iconBg: "bg-pink-500",
     title: "Women Empowerment",
     description:
-      "Encouraging women through training, resources and livelihood opportunities.",
+      "Encouraging women through skill training, resources and livelihood opportunities across West Bengal.",
     image:
       "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?w=500&q=80&auto=format&fit=crop",
+    imageAlt:
+      "Women empowerment program by Asroy Welfare Trust in West Bengal",
   },
   {
     icon: Baby,
     iconBg: "bg-orange-500",
     title: "Child Welfare",
     description:
-      "Supporting the growth, protection and education of underprivileged children.",
+      "Supporting the growth, protection and education of underprivileged children in Murshidabad.",
     image:
       "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=500&q=80&auto=format&fit=crop",
+    imageAlt:
+      "Child welfare initiative by Asroy Welfare Trust NGO in Murshidabad, West Bengal",
   },
   {
     icon: TreePine,
     iconBg: "bg-trust-green",
     title: "Community Development",
     description:
-      "Working on sustainable projects for a stronger and self-reliant community.",
+      "Working on sustainable projects for a stronger and self-reliant community in Raghunathganj.",
     image:
       "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=500&q=80&auto=format&fit=crop",
+    imageAlt:
+      "Community development project by Asroy Welfare Trust in Raghunathganj, Murshidabad",
   },
 ];
 
@@ -88,7 +98,7 @@ export default function WhatWeDo() {
                 <div className="relative h-44 overflow-hidden">
                   <Image
                     src={prog.image}
-                    alt={prog.title}
+                    alt={prog.imageAlt}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />

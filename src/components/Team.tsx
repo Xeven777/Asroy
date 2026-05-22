@@ -1,62 +1,49 @@
-import Image from "next/image";
-import { Globe, Share2, Mail, Heart } from "lucide-react";
+import Image, { StaticImageData } from "next/image";
+import { Mail, Heart, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import sr from "@/assets/members/sr.webp";
+import kg from "@/assets/members/sr.webp";
+import ab from "@/assets/members/ab.webp";
+import zk from "@/assets/members/zk.webp";
 
 type Leader = {
   name: string;
   role: string;
   bio: string;
-  image: string;
+  image: string | StaticImageData;
 };
 
 type Volunteer = {
   name: string;
   role: string;
-  image: string;
+  image: string | StaticImageData;
 };
 
 const leaders: Leader[] = [
   {
-    name: "Abdul Rahman",
-    role: "Founder & President",
+    name: "Supriya Roy",
+    role: "Founder & Secretary",
     bio: "Founded Asroy with a vision to ensure no child in Murshidabad is left behind.",
-    image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80&auto=format&fit=crop",
+    image: sr,
   },
   {
-    name: "Nasreen Begum",
-    role: "General Secretary",
+    name: "Kuntak Ghosh",
+    role: "Founder & Secretary",
     bio: "Leads day-to-day operations and steers our education and women empowerment drives.",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80&auto=format&fit=crop",
-  },
-  {
-    name: "Imran Sheikh",
-    role: "Treasurer",
-    bio: "Safeguards transparency and ensures every contribution reaches those who need it.",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&q=80&auto=format&fit=crop",
+    image: kg,
   },
 ];
 
 const volunteers: Volunteer[] = [
   {
-    name: "Priya Das",
-    role: "Education Volunteer",
-    image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80&auto=format&fit=crop",
+    name: "Zinia Khatun",
+    role: "Executive Member",
+    image: zk,
   },
   {
-    name: "Rakesh Mondal",
-    role: "Field Coordinator",
-    image:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=80&auto=format&fit=crop",
-  },
-  {
-    name: "Fatima Khatun",
-    role: "Healthcare Member",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80&auto=format&fit=crop",
+    name: "Anish Biswas",
+    role: "Project Developer",
+    image: ab,
   },
 ];
 
@@ -95,7 +82,7 @@ export default function Team() {
         </div>
 
         {/* Leadership cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
           {leaders.map((leader) => (
             <article
               key={leader.name}
@@ -111,8 +98,8 @@ export default function Team() {
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-trust-navy-dark/80 via-trust-navy-dark/10 to-transparent" />
                 {/* Socials */}
-                <div className="absolute bottom-4 right-4 flex gap-2 translate-y-2 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                  {[Globe, Share2, Mail].map((Icon, i) => (
+                <div className="absolute bottom-4 right-4 flex gap-2 translate-y-2 sm:opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                  {[Phone, Mail].map((Icon, i) => (
                     <a
                       key={i}
                       href="#"

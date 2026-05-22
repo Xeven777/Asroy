@@ -11,19 +11,19 @@ import abt4 from "@/assets/abt4.webp";
 const aboutImages = [
   {
     src: abt1,
-    alt: "Children together",
+    alt: "Asroy Welfare Trust volunteers with underprivileged children in Murshidabad, West Bengal",
   },
   {
     src: abt2,
-    alt: "Nature and sustainability",
+    alt: "Community sustainability initiative by Asroy NGO in West Bengal",
   },
   {
     src: abt3,
-    alt: "Healthcare services",
+    alt: "Free healthcare camp organized by Asroy Welfare Trust in Murshidabad",
   },
   {
     src: abt4,
-    alt: "Community development",
+    alt: "Community development project by Asroy Welfare Trust, Raghunathganj",
   },
 ];
 
