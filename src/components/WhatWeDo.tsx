@@ -82,9 +82,10 @@ export default function WhatWeDo() {
                   <Image
                     src={prog.image}
                     alt={prog.imageAlt}
-                    fill
+                    width={350}
+                    height={300}
                     loading="lazy"
-                    className="object-cover group-hover:scale-105 transition-all brightness-130 duration-500"
+                    className="object-cover size-full group-hover:scale-105 transition-all brightness-130 duration-500"
                   />
                   {/* Icon badge */}
                   <div

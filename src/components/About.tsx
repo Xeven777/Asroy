@@ -81,9 +81,10 @@ export default function About() {
                   <Image
                     src={img.src}
                     alt={img.alt}
-                    fill
+                    width={350}
+                    height={300}
                     loading="lazy"
-                    className="object-cover hover:scale-105 transition-transform duration-500"
+                    className="object-cover size-full brightness-105 saturate-110 hover:scale-105 transition-transform duration-500"
                   />
                 </div>
               ))}

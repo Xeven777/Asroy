@@ -72,7 +72,7 @@ export default function Team() {
                   alt={person.name}
                   fill
                   loading="lazy"
-                  sizes="260px"
+                  sizes="300px"
                   className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
