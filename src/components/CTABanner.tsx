@@ -1,5 +1,6 @@
 import { Heart, HandHeart, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import GetInvolvedDialog from "@/components/GetInvolvedDialog";
 
 export default function CTABanner() {
   return (
@@ -44,14 +45,24 @@ export default function CTABanner() {
 
             {/* CTA buttons */}
             <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row lg:flex-col xl:flex-row">
-              <Button variant="secondary" size="lg">
-                <Heart className="h-5 w-5 fill-white stroke-0" />
-                Donate Now
-              </Button>
-              <Button size="lg" variant={"outline"}>
-                Become a Volunteer
-                <ArrowRight className="h-5 w-5" />
-              </Button>
+              <GetInvolvedDialog
+                defaultTab="donate"
+                trigger={
+                  <Button variant="secondary" size="lg">
+                    <Heart className="h-5 w-5 fill-white stroke-0" />
+                    Donate Now
+                  </Button>
+                }
+              />
+              <GetInvolvedDialog
+                defaultTab="join"
+                trigger={
+                  <Button size="lg" variant={"outline"}>
+                    Become a Volunteer
+                    <ArrowRight className="h-5 w-5" />
+                  </Button>
+                }
+              />
             </div>
           </div>
         </div>

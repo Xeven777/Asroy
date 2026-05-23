@@ -6,6 +6,7 @@ import WhatWeDo from "@/components/WhatWeDo";
 import Gallery from "@/components/Gallery";
 import Team from "@/components/Team";
 import CTABanner from "@/components/CTABanner";
+import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -34,6 +35,7 @@ export default function Home() {
       <Gallery />
       <Team />
       <CTABanner />
+      <ContactSection />
       <Footer />
     </main>
   );

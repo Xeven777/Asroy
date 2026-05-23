@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Heart, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import GetInvolvedDialog from "@/components/GetInvolvedDialog";
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About Us", href: "#about" },
@@ -56,10 +57,15 @@ export default function Navbar() {
 
           {/* Donate CTA */}
           <div className="hidden lg:flex">
-            <Button variant="secondary" size="sm">
-              <Heart className="w-4 h-4 fill-white stroke-0" />
-              Donate Now
-            </Button>
+            <GetInvolvedDialog
+              defaultTab="donate"
+              trigger={
+                <Button variant="secondary" size="sm">
+                  <Heart className="w-4 h-4 fill-white stroke-0" />
+                  Donate Now
+                </Button>
+              }
+            />
           </div>
 
           {/* Mobile toggle */}
@@ -88,10 +94,15 @@ export default function Navbar() {
               </Link>
             ))}
             <div className="pt-2 pb-3">
-              <Button variant="secondary" className="w-full">
-                <Heart className="w-4 h-4 fill-white stroke-0" />
-                Donate Now
-              </Button>
+              <GetInvolvedDialog
+                defaultTab="donate"
+                trigger={
+                  <Button variant="secondary" className="w-full">
+                    <Heart className="w-4 h-4 fill-white stroke-0" />
+                    Donate Now
+                  </Button>
+                }
+              />
             </div>
           </div>
         </div>

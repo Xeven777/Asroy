@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ArrowRight, Play, Users, Briefcase, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import GetInvolvedDialog from "@/components/GetInvolvedDialog";
 import heroImage from "@/assets/hero.webp";
 
 const stats = [
@@ -65,13 +66,14 @@ export default function Hero() {
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </a>
               </Button>
-              <a
-                href="http://wa.me/9732643449?text=I%20would%20like%20to%20know%20more%20about%20Asroy%20Welfare%20Trust's%20work%20and%20how%20I%20can%20contribute."
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button variant="secondary">Donate</Button>
-              </a>
+              <GetInvolvedDialog
+                defaultTab="donate"
+                trigger={<Button variant="secondary">Donate</Button>}
+              />
+              <GetInvolvedDialog
+                defaultTab="join"
+                trigger={<Button variant="outline">Join Us</Button>}
+              />
             </div>
 
             {/* Stats */}
