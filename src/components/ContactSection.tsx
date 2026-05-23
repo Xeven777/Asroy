@@ -2,9 +2,8 @@
 
 import { useState } from "react";
 import { Heart, HandHeart, Mail, Phone, MapPin } from "lucide-react";
-
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { DonateForm, JoinForm } from "@/components/GetInvolvedDialog";
+import { DonateDetails, JoinForm } from "@/components/GetInvolvedDialog";
 
 type Tab = "donate" | "join";
 
@@ -12,8 +11,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email us",
-    value: "contact@asroywelfare.org",
-    href: "mailto:contact@asroywelfare.org",
+    value: "asroywelfaretrust@gmail.com",
+    href: "mailto:asroywelfaretrust@gmail.com",
   },
   {
     icon: Phone,
@@ -24,7 +23,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Visit",
-    value: "West Bengal, India",
+    value: "Indira Pally, Raghunathganj, Murshidabad, PIN - 742225",
   },
 ];
 
@@ -47,7 +46,7 @@ export default function ContactSection() {
                   Get Involved
                 </span>
               </span>
-              <h2 className="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-trust-navy leading-tight">
+              <h2 className="mt-4 text-3xl sm:text-4xl lg:text-6xl font-medium tracking-tight text-trust-navy font-crimson">
                 Be part of the change
                 <br />
                 <span className="bg-linear-to-r from-trust-green to-trust-green-light bg-clip-text text-transparent">
@@ -90,7 +89,7 @@ export default function ContactSection() {
 
           {/* Right — form card */}
           <div className="relative">
-            <div className="absolute -inset-3 rounded-[2rem] bg-linear-to-br from-trust-green/10 via-transparent to-trust-navy/10 blur-2xl pointer-events-none" />
+            <div className="absolute -inset-3 rounded-4xl bg-linear-to-br from-trust-green/10 via-transparent to-trust-navy/10 blur-2xl pointer-events-none" />
             <div className="relative rounded-3xl border border-white bg-white p-5 sm:p-7 shadow-2xl shadow-trust-navy/10 ring-1 ring-gray-100">
               <Tabs
                 value={tab}
@@ -115,7 +114,7 @@ export default function ContactSection() {
                 </TabsList>
 
                 <TabsContent value="donate" className="mt-6">
-                  <DonateForm />
+                  <DonateDetails />
                 </TabsContent>
                 <TabsContent value="join" className="mt-6">
                   <JoinForm />

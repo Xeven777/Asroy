@@ -1,6 +1,11 @@
 import Image from "next/image";
 import { BookOpen, Stethoscope, Users, Baby, TreePine } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
+import img1 from "@/assets/work/1.webp";
+import img2 from "@/assets/work/2.webp";
+import img3 from "@/assets/work/3.webp";
+import img4 from "@/assets/work/4.webp";
+import img5 from "@/assets/work/5.webp";
 
 const programs = [
   {
@@ -9,8 +14,7 @@ const programs = [
     title: "Education",
     description:
       "Providing quality education and skill development opportunities for children and youth in Murshidabad.",
-    image:
-      "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&q=80&auto=format&fit=crop",
+    image: img4,
     imageAlt:
       "Education program by Asroy Welfare Trust NGO for children in Murshidabad, West Bengal",
   },
@@ -20,8 +24,7 @@ const programs = [
     title: "Healthcare",
     description:
       "Organizing free health camps and making healthcare accessible to underprivileged families in West Bengal.",
-    image:
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&q=80&auto=format&fit=crop",
+    image: img5,
     imageAlt:
       "Free healthcare camp organized by Asroy NGO in Murshidabad, West Bengal",
   },
@@ -31,10 +34,8 @@ const programs = [
     title: "Women Empowerment",
     description:
       "Encouraging women through skill training, resources and livelihood opportunities across West Bengal.",
-    image:
-      "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?w=500&q=80&auto=format&fit=crop",
-    imageAlt:
-      "Women empowerment program by Asroy Welfare Trust in West Bengal",
+    image: img2,
+    imageAlt: "Women empowerment program by Asroy Welfare Trust in West Bengal",
   },
   {
     icon: Baby,
@@ -42,8 +43,7 @@ const programs = [
     title: "Child Welfare",
     description:
       "Supporting the growth, protection and education of underprivileged children in Murshidabad.",
-    image:
-      "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=500&q=80&auto=format&fit=crop",
+    image: img3,
     imageAlt:
       "Child welfare initiative by Asroy Welfare Trust NGO in Murshidabad, West Bengal",
   },
@@ -53,8 +53,7 @@ const programs = [
     title: "Community Development",
     description:
       "Working on sustainable projects for a stronger and self-reliant community in Raghunathganj.",
-    image:
-      "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=500&q=80&auto=format&fit=crop",
+    image: img1,
     imageAlt:
       "Community development project by Asroy Welfare Trust in Raghunathganj, Murshidabad",
   },
@@ -70,7 +69,7 @@ export default function WhatWeDo() {
         />
 
         {/* Program cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {programs.map((prog) => {
             const Icon = prog.icon;
             return (
@@ -79,19 +78,19 @@ export default function WhatWeDo() {
                 className="group bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
               >
                 {/* Image */}
-                <div className="relative h-44 overflow-hidden">
+                <div className="relative h-44 md:h-60 overflow-hidden">
                   <Image
                     src={prog.image}
                     alt={prog.imageAlt}
                     fill
                     loading="lazy"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover group-hover:scale-105 transition-all brightness-130 duration-500"
                   />
                   {/* Icon badge */}
                   <div
                     className={`absolute top-3 left-3 w-10 h-10 rounded-full ${prog.iconBg} flex items-center justify-center shadow-lg`}
                   >
-                    <Icon className="w-5 h-5 text-white" />
+                    <Icon className="size-5 text-white" />
                   </div>
                 </div>
                 {/* Content */}
@@ -99,7 +98,7 @@ export default function WhatWeDo() {
                   <h3 className="font-bold text-trust-navy text-base mb-2">
                     {prog.title}
                   </h3>
-                  <p className="text-gray-600 text-xs leading-relaxed">
+                  <p className="text-gray-600 text-sm leading-relaxed">
                     {prog.description}
                   </p>
                 </div>

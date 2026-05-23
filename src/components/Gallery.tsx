@@ -43,7 +43,7 @@ export default function Gallery() {
         <SectionHeading
           label="Gallery"
           title="Moments of Impact"
-          subtitle="Real stories, real change — glimpses from our work across communities"
+          subtitle="Real stories, real change - glimpses from our work across communities"
         />
 
         {/* Grid */}

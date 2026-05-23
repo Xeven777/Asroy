@@ -12,7 +12,6 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <main className="min-h-screen">
-      {/* Hidden structured text for SEO — visible to crawlers, not to users */}
       <div className="sr-only" aria-hidden="true">
         <h1>Asroy Welfare Trust – NGO in Murshidabad, West Bengal</h1>
         <p>
@@ -32,7 +31,7 @@ export default function Home() {
       <About />
       <Certifications />
       <WhatWeDo />
-      <Gallery />
+      {/* <Gallery /> */}
       <Team />
       <CTABanner />
       <ContactSection />

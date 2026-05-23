@@ -55,21 +55,12 @@ export const metadata: Metadata = {
     title: "Asroy Welfare Trust | NGO in Murshidabad, West Bengal",
     description:
       "A registered NGO in Murshidabad, West Bengal working for education, healthcare, women empowerment, and child welfare. Helping underprivileged communities across West Bengal.",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Asroy Welfare Trust – NGO in Murshidabad, West Bengal",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Asroy Welfare Trust | NGO in Murshidabad, West Bengal",
     description:
       "Registered NGO in Murshidabad, West Bengal working for education, healthcare, and community development.",
-    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -117,7 +108,7 @@ const jsonLd = {
         width: 52,
         height: 52,
       },
-      image: `${siteUrl}/og-image.jpg`,
+      image: `${siteUrl}/logo1.webp`,
       description:
         "Asroy Welfare Trust is a registered NGO in Murshidabad, West Bengal dedicated to education, healthcare, women empowerment, child welfare, and community development for underprivileged communities.",
       address: {

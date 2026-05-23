@@ -8,7 +8,10 @@ import {
   CheckCircle2,
   Send,
   Loader2,
-  IndianRupee,
+  Building2,
+  Copy,
+  Check,
+  MessageCircle,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -37,7 +40,17 @@ const fieldClass =
 
 const labelClass = "text-xs font-semibold text-trust-navy uppercase tracking-wide";
 
-const donateAmounts = [500, 1000, 2500, 5000];
+const bankDetails: { label: string; value: string; copyable?: boolean }[] = [
+  { label: "Account Holder", value: "Asroy Welfare Trust" },
+  { label: "Account Number", value: "08170110213490", copyable: true },
+  { label: "Bank", value: "UCO Bank" },
+  { label: "Branch", value: "Berhampore-Salt Lake" },
+  { label: "IFSC Code", value: "UCBA0000817", copyable: true },
+  { label: "MICR Code", value: "742028002" },
+];
+
+const WHATSAPP_LINK =
+  "https://wa.me/919732643449?text=Hi%2C%20I%27d%20like%20to%20donate%20to%20Asroy%20Welfare%20Trust.%20Please%20share%20the%20details.";
 
 function SuccessState({
   title,
@@ -67,151 +80,100 @@ function SuccessState({
   );
 }
 
-export function DonateForm({ onDone }: { onDone?: () => void }) {
-  const [state, handleSubmit] = useForm("meedzeep");
-  const [amount, setAmount] = useState<number | "">(1000);
+export function DonateDetails() {
+  const [copied, setCopied] = useState<string | null>(null);
 
-  if (state.succeeded) {
-    return (
-      <SuccessState
-        title="Thank you for your generosity!"
-        message="Your contribution helps us bring education, healthcare, and hope to more lives. Our team will reach out shortly with next steps."
-        onClose={() => onDone?.()}
-      />
-    );
-  }
+  const copy = async (value: string) => {
+    try {
+      await navigator.clipboard.writeText(value);
+      setCopied(value);
+      setTimeout(() => setCopied(null), 1500);
+    } catch {
+      // ignore
+    }
+  };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-      <div>
-        <Label className={labelClass}>Choose an amount (₹)</Label>
-        <div className="mt-2 grid grid-cols-4 gap-2">
-          {donateAmounts.map((amt) => (
-            <button
-              key={amt}
-              type="button"
-              onClick={() => setAmount(amt)}
-              className={`h-10 rounded-xl text-sm font-semibold transition-all active:scale-95 ${
-                amount === amt
-                  ? "bg-trust-green text-white shadow-md shadow-trust-green/30"
-                  : "bg-trust-green-pale text-trust-navy hover:bg-trust-green/15"
-              }`}
+    <div className="flex flex-col gap-5">
+      <div className="rounded-2xl border border-trust-green/15 bg-linear-to-br from-trust-green-pale/60 to-white p-4 sm:p-5">
+        <div className="flex items-center gap-3">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-trust-green/15 text-trust-green">
+            <Building2 className="h-5 w-5" />
+          </div>
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-wider text-trust-green">
+              Bank Transfer / NEFT
+            </p>
+            <p className="text-sm font-bold text-trust-navy leading-tight">
+              UCO Bank · Berhampore-Salt Lake
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-4 divide-y divide-trust-green/10 rounded-xl bg-white ring-1 ring-trust-green/10 overflow-hidden">
+          {bankDetails.map((row) => (
+            <div
+              key={row.label}
+              className="flex items-center justify-between gap-3 px-3.5 py-2.5"
             >
-              ₹{amt.toLocaleString("en-IN")}
-            </button>
+              <div className="min-w-0">
+                <p className="text-[10px] font-semibold uppercase tracking-wider text-gray-400">
+                  {row.label}
+                </p>
+                <p className="text-sm font-semibold text-trust-navy truncate">
+                  {row.value}
+                </p>
+              </div>
+              {row.copyable && (
+                <button
+                  type="button"
+                  onClick={() => copy(row.value)}
+                  className="shrink-0 inline-flex items-center gap-1 rounded-lg bg-trust-green-pale px-2.5 py-1.5 text-[11px] font-semibold text-trust-green hover:bg-trust-green/15 transition active:scale-95"
+                  aria-label={`Copy ${row.label}`}
+                >
+                  {copied === row.value ? (
+                    <>
+                      <Check className="h-3 w-3" />
+                      Copied
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="h-3 w-3" />
+                      Copy
+                    </>
+                  )}
+                </button>
+              )}
+            </div>
           ))}
         </div>
-        <div className="relative mt-2">
-          <IndianRupee className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
-          <Input
-            type="number"
-            name="amount"
-            min={1}
-            value={amount}
-            onChange={(e) =>
-              setAmount(e.target.value === "" ? "" : Number(e.target.value))
-            }
-            placeholder="Custom amount"
-            className={`${fieldClass} pl-9`}
-          />
-        </div>
-        <ValidationError
-          prefix="Amount"
-          field="amount"
-          errors={state.errors}
-          className="mt-1 text-xs text-red-500"
-        />
+
+        <p className="mt-3 text-[11px] leading-relaxed text-gray-500">
+          Branch: 5-5/1, B Gupta Road, PO-Khagrag, Dist-Murshidabad,
+          Berhampur 742103
+        </p>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2">
-        <div>
-          <Label htmlFor="donate-name" className={labelClass}>
-            Full name
-          </Label>
-          <Input
-            id="donate-name"
-            name="name"
-            required
-            placeholder="Your name"
-            className={`${fieldClass} mt-2`}
-          />
-        </div>
-        <div>
-          <Label htmlFor="donate-phone" className={labelClass}>
-            Phone
-          </Label>
-          <Input
-            id="donate-phone"
-            name="phone"
-            type="tel"
-            placeholder="+91 ..."
-            className={`${fieldClass} mt-2`}
-          />
-        </div>
+      <div className="rounded-2xl border border-gray-100 bg-white p-4 sm:p-5 shadow-sm">
+        <p className="text-sm font-semibold text-trust-navy">
+          Need help with the transfer or want an 80G receipt?
+        </p>
+        <p className="mt-1 text-xs leading-relaxed text-gray-600">
+          Reach out on WhatsApp — we&apos;ll guide you through the donation
+          and send you a confirmation.
+        </p>
+        <Button asChild variant="secondary" size="lg" className="mt-4 w-full">
+          <a
+            href={WHATSAPP_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <MessageCircle className="h-4 w-4 fill-white stroke-0" />
+            Contact us on WhatsApp
+          </a>
+        </Button>
       </div>
-
-      <div>
-        <Label htmlFor="donate-email" className={labelClass}>
-          Email
-        </Label>
-        <Input
-          id="donate-email"
-          type="email"
-          name="email"
-          required
-          placeholder="you@example.com"
-          className={`${fieldClass} mt-2`}
-        />
-        <ValidationError
-          prefix="Email"
-          field="email"
-          errors={state.errors}
-          className="mt-1 text-xs text-red-500"
-        />
-      </div>
-
-      <div>
-        <Label htmlFor="donate-message" className={labelClass}>
-          Message <span className="font-normal text-gray-400 normal-case">(optional)</span>
-        </Label>
-        <Textarea
-          id="donate-message"
-          name="message"
-          rows={3}
-          placeholder="Anything you'd like us to know..."
-          className="mt-2 rounded-xl border-gray-200 bg-white focus-visible:ring-trust-green focus-visible:ring-2 focus-visible:border-trust-green"
-        />
-        <ValidationError
-          prefix="Message"
-          field="message"
-          errors={state.errors}
-          className="mt-1 text-xs text-red-500"
-        />
-      </div>
-
-      <Button
-        type="submit"
-        variant="secondary"
-        size="lg"
-        disabled={state.submitting}
-        className="mt-2 w-full"
-      >
-        {state.submitting ? (
-          <>
-            <Loader2 className="h-4 w-4 animate-spin" />
-            Sending...
-          </>
-        ) : (
-          <>
-            <Heart className="h-4 w-4 fill-white stroke-0" />
-            Pledge to donate
-          </>
-        )}
-      </Button>
-      <p className="text-center text-[11px] leading-relaxed text-gray-500">
-        We&apos;ll reach out with payment details. 80G receipts available.
-      </p>
-    </form>
+    </div>
   );
 }
 
@@ -411,7 +373,7 @@ export default function GetInvolvedDialog({
             </TabsList>
 
             <TabsContent value="donate" className="mt-5">
-              <DonateForm onDone={() => setOpen(false)} />
+              <DonateDetails />
             </TabsContent>
             <TabsContent value="join" className="mt-5">
               <JoinForm onDone={() => setOpen(false)} />
