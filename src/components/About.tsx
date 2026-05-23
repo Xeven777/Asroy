@@ -42,8 +42,10 @@ export default function About() {
               </span>
             </div>
 
-            <h2 className="text-3xl md:text-5xl tracking-tight font-extrabold text-trust-navy leading-tight font-crimson">
-              Together we bring hope where it's needed most
+            <h2 className="text-3xl md:text-5xl tracking-tighter text-trust-navy font-crimson">
+              Together we bring hope
+              <br />
+              <span className="text-trust-green">where it's needed most</span>
             </h2>
 
             <div className="h-1 w-16 bg-trust-green rounded-full" />

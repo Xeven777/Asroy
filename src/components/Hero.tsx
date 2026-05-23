@@ -43,7 +43,7 @@ export default function Hero() {
             </div>
 
             {/* Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight text-trust-navy font-crimson">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl tracking-tighter text-trust-navy font-crimson">
               Together we build
               <br />
               <span className="bg-linear-to-r from-trust-green to-trust-green-light bg-clip-text text-transparent">

@@ -1,4 +1,5 @@
-import { Award, BadgeCheck, Leaf, Building2, LeafIcon } from "lucide-react";
+import { Award, BadgeCheck, Leaf, Building2 } from "lucide-react";
+import SectionHeading from "@/components/SectionHeading";
 
 const certs = [
   {
@@ -42,19 +43,11 @@ export default function Certifications() {
   return (
     <section id="certifications" className="py-16 md:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-3 mb-2">
-            <LeafIcon className="-scale-x-100 fill-trust-green text-trust-green" />
-            <span className="text-trust-navy font-bold text-2xl md:text-4xl font-crimson">
-              Certifications &amp; Recognitions
-            </span>
-            <LeafIcon className="fill-trust-green text-trust-green" />
-          </div>
-          <p className="text-muted-foreground text-sm">
-            Our commitment to transparency and excellence
-          </p>
-        </div>
+        <SectionHeading
+          label="Certifications"
+          title="Certifications &amp; Recognitions"
+          subtitle="Our commitment to transparency and excellence"
+        />
 
         {/* Cards */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { BookOpen, Stethoscope, Users, Baby, TreePine } from "lucide-react";
+import SectionHeading from "@/components/SectionHeading";
 
 const programs = [
   {
@@ -59,31 +60,14 @@ const programs = [
   },
 ];
 
-function SectionLeaf() {
-  return (
-    <svg viewBox="0 0 20 24" className="w-4 h-5 text-trust-green" fill="currentColor">
-      <path d="M10 1C6 1 2 5 2 12C2 18 6 23 10 23C14 23 18 18 18 12C18 5 14 1 10 1Z" />
-    </svg>
-  );
-}
-
 export default function WhatWeDo() {
   return (
     <section id="work" className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-3 mb-2">
-            <SectionLeaf />
-            <span className="text-trust-green font-bold text-sm tracking-widest uppercase">
-              What We Do
-            </span>
-            <SectionLeaf />
-          </div>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-trust-navy">
-            We work for a better tomorrow
-          </h2>
-        </div>
+        <SectionHeading
+          label="What We Do"
+          title="We work for a better tomorrow"
+        />
 
         {/* Program cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">

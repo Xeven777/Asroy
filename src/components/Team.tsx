@@ -1,6 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import { Mail, Heart, Phone, Quote, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import SectionHeading from "@/components/SectionHeading";
 import sr from "@/assets/members/sr.webp";
 import kg from "@/assets/members/kg.webp";
 import ab from "@/assets/members/ab.webp";
@@ -56,39 +57,16 @@ const volunteers: Volunteer[] = [
   },
 ];
 
-function SectionLeaf() {
-  return (
-    <svg
-      viewBox="0 0 20 24"
-      className="w-4 h-5 text-trust-green"
-      fill="currentColor"
-    >
-      <path d="M10 1C6 1 2 5 2 12C2 18 6 23 10 23C14 23 18 18 18 12C18 5 14 1 10 1Z" />
-    </svg>
-  );
-}
-
 export default function Team() {
   return (
     <section id="team" className="py-16 md:py-24 bg-trust-blue-pale/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        {/* Leadership header */}
-        <div className="text-center mb-14 md:mb-20">
-          <div className="flex items-center justify-center gap-3 mb-2">
-            <SectionLeaf />
-            <span className="text-trust-green font-bold text-sm tracking-widest uppercase">
-              Our Leadership
-            </span>
-            <SectionLeaf />
-          </div>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-trust-navy">
-            The hearts behind Asroy
-          </h2>
-          <p className="mt-4 text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            A dedicated team guiding our mission with compassion, integrity and
-            an unwavering commitment to the communities we serve.
-          </p>
-        </div>
+        <SectionHeading
+          label="Our Leadership"
+          title="The hearts behind Asroy"
+          subtitle="A dedicated team guiding our mission with compassion, integrity and an unwavering commitment to the communities we serve."
+          className="mb-14 md:mb-20"
+        />
 
         {/* Leadership cards — image left, content right */}
         <div className="space-y-10 md:space-y-14">
@@ -165,23 +143,12 @@ export default function Team() {
           ))}
         </div>
 
-        {/* Volunteers header */}
-        <div className="text-center mt-24 mb-12">
-          <div className="flex items-center justify-center gap-3 mb-2">
-            <SectionLeaf />
-            <span className="text-trust-green font-bold text-sm tracking-widest uppercase">
-              Our Community
-            </span>
-            <SectionLeaf />
-          </div>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-trust-navy">
-            Volunteers &amp; Members
-          </h2>
-          <p className="mt-3 text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            The hands that turn intent into action, on the ground and by your
-            side, every single day.
-          </p>
-        </div>
+        <SectionHeading
+          label="Our Community"
+          title="Volunteers &amp; Members"
+          subtitle="The hands that turn intent into action, on the ground and by your side, every single day."
+          className="mt-24 mb-12"
+        />
 
         {/* Volunteer cards */}
         <div className="mx-auto grid max-w-7xl grid-cols-1 sm:grid-cols-2 gap-6">

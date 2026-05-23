@@ -1,6 +1,7 @@
 import Image from "next/image";
-import { ArrowRight, Images } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import SectionHeading from "@/components/SectionHeading";
 
 const galleryImages = [
   {
@@ -35,35 +36,15 @@ const galleryImages = [
   },
 ];
 
-function SectionLeaf() {
-  return (
-    <svg viewBox="0 0 20 24" className="w-4 h-5 text-trust-green" fill="currentColor">
-      <path d="M10 1C6 1 2 5 2 12C2 18 6 23 10 23C14 23 18 18 18 12C18 5 14 1 10 1Z" />
-    </svg>
-  );
-}
-
 export default function Gallery() {
   return (
     <section id="gallery" className="py-16 md:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-3 mb-2">
-            <SectionLeaf />
-            <span className="text-trust-green font-bold text-sm tracking-widest uppercase flex items-center gap-2">
-              <Images className="w-4 h-4" />
-              Gallery
-            </span>
-            <SectionLeaf />
-          </div>
-          <h2 className="text-3xl md:text-4xl font-extrabold text-trust-navy">
-            Moments of Impact
-          </h2>
-          <p className="text-muted-foreground text-sm mt-2">
-            Real stories, real change — glimpses from our work across communities
-          </p>
-        </div>
+        <SectionHeading
+          label="Gallery"
+          title="Moments of Impact"
+          subtitle="Real stories, real change — glimpses from our work across communities"
+        />
 
         {/* Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
