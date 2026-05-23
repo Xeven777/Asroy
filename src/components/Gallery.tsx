@@ -57,6 +57,7 @@ export default function Gallery() {
                 src={img.src}
                 alt={img.alt}
                 fill
+                loading="lazy"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
               {/* Overlay on hover */}

@@ -82,6 +82,7 @@ export default function Team() {
                     src={leader.image}
                     alt={leader.name}
                     fill
+                    loading="lazy"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 40vw, 42vw"
                     className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                     priority={idx === 0}
@@ -162,6 +163,7 @@ export default function Team() {
                   src={person.image}
                   alt={person.name}
                   fill
+                  loading="lazy"
                   sizes="150px"
                   className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />

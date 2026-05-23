@@ -82,6 +82,7 @@ export default function About() {
                     src={img.src}
                     alt={img.alt}
                     fill
+                    loading="lazy"
                     className="object-cover hover:scale-105 transition-transform duration-500"
                   />
                 </div>
