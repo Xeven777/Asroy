@@ -29,9 +29,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
-      <Certifications />
+      {/* <Certifications /> */}
       <WhatWeDo />
-      {/* <Gallery /> */}
+      <Gallery />
       <Team />
       <CTABanner />
       <ContactSection />

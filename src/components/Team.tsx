@@ -20,7 +20,7 @@ type Member = {
 const members: Member[] = [
   {
     name: "Supriya Roy",
-    role: "Founder & Secretary",
+    role: "Secretary",
     phone: "+919732643449",
     bio: "Founded Asroy with a vision to ensure no child in Murshidabad is left behind.",
     image: sr,
