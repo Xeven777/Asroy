@@ -1,6 +1,4 @@
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
 import img1 from "@/assets/gallery/1.webp";
 import img2 from "@/assets/gallery/2.webp";
