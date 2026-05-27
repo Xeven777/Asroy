@@ -32,7 +32,26 @@ export default function About() {
     <section id="about" className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Left – Text */}
+          <div className="relative">
+            <div className="grid grid-cols-2 gap-3">
+              {aboutImages.map((img, i) => (
+                <div
+                  key={i}
+                  className="relative aspect-4/3 rounded-2xl overflow-hidden shadow-md"
+                >
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    width={350}
+                    height={300}
+                    loading="lazy"
+                    className="object-cover size-full brightness-105 saturate-110 hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+
           <div className="flex flex-col gap-6">
             {/* Label */}
             <div className="flex items-center gap-3">
@@ -68,27 +87,6 @@ export default function About() {
                 Know More About Us <ArrowRight className="w-4 h-4" />
               </a>
             </Button>
-          </div>
-
-          {/* Right – Image grid */}
-          <div className="relative">
-            <div className="grid grid-cols-2 gap-3">
-              {aboutImages.map((img, i) => (
-                <div
-                  key={i}
-                  className="relative aspect-4/3 rounded-2xl overflow-hidden shadow-md"
-                >
-                  <Image
-                    src={img.src}
-                    alt={img.alt}
-                    width={350}
-                    height={300}
-                    loading="lazy"
-                    className="object-cover size-full brightness-105 saturate-110 hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>
