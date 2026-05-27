@@ -21,7 +21,7 @@ const programs = [
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-trust-navy-dark text-white">
+    <footer className="bg-trust-navy-dark text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main footer */}
         <div className="grid grid-cols-2 gap-x-8 gap-y-10 py-12 sm:grid-cols-2 md:py-14 lg:grid-cols-12 lg:gap-10 border-b border-white/10">

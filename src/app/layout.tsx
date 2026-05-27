@@ -12,7 +12,7 @@ const sans = Nunito({
   weight: ["400", "500", "600", "700", "800"],
 });
 
-const siteUrl = "https://asroywelfaretrust.com";
+const siteUrl = "https://asroywelfare.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -43,9 +43,9 @@ export const metadata: Metadata = {
     "volunteer West Bengal NGO",
     "donate NGO West Bengal",
   ],
-  authors: [{ name: "Asroy Welfare Trust" }],
-  creator: "Asroy Welfare Trust",
-  publisher: "Asroy Welfare Trust",
+  authors: [{ name: "Anish" }],
+  creator: "Anish",
+  publisher: "Anish",
   category: "Non-Profit Organization",
   openGraph: {
     type: "website",

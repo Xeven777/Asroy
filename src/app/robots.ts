@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://asroywelfaretrust.com/sitemap.xml",
+    sitemap: "https://asroywelfare.com/sitemap.xml",
   };
 }
