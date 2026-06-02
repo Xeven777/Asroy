@@ -13,6 +13,7 @@ type Member = {
   bio: string;
   image: string | StaticImageData;
   email?: string;
+  desg?: string;
   phone?: string;
   website?: string;
 };
@@ -21,19 +22,22 @@ const members: Member[] = [
   {
     name: "Supriya Roy",
     role: "Secretary",
+    desg: "Chartered Accountant",
     phone: "+919732643449",
     bio: "Founded Asroy with a vision to ensure no child in Murshidabad is left behind.",
     image: sr,
   },
   {
-    name: "Kuntak Ghosh",
+    name: "Dr. Kuntak Ghosh",
     role: "Chief Advisor",
+    desg: "MSW, PhD",
     bio: "Leads day-to-day operations and steers our education and women empowerment drives.",
     image: kg,
   },
   {
     name: "Zinia Khatun",
     role: "Executive Officer",
+    desg: "Graphics Designer",
     bio: "Coordinates field programmes and keeps day-to-day operations running across our community initiatives.",
     email: "zinia@auradevs.co",
     website: "https://kurozinia.netlify.app",
@@ -42,6 +46,7 @@ const members: Member[] = [
   {
     name: "Anish Biswas",
     role: "Project Developer",
+    desg: "Software Engineer",
     bio: "Builds the digital backbone of Asroy — from this very website to the tools our team uses on the ground.",
     email: "anish@auradevs.co",
     website: "https://anish7.me",
@@ -81,9 +86,12 @@ export default function Team() {
                 <p className="text-xs font-bold uppercase tracking-widest text-trust-green">
                   {person.role}
                 </p>
-                <h3 className="my-2 md:text-3xl font-crimson text-lg text-trust-navy leading-tight tracking-tight">
+                <h3 className="mt-2 md:text-3xl font-crimson text-lg text-trust-navy leading-tight tracking-tight">
                   {person.name}
                 </h3>
+                <p className="mt-1.5 text-sm leading-relaxed font-semibold line-clamp-1">
+                  {person.desg}
+                </p>
                 <p className="mt-1.5 text-sm leading-relaxed text-gray-600 line-clamp-4">
                   {person.bio}
                 </p>

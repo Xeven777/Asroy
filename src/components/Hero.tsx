@@ -52,13 +52,13 @@ export default function Hero() {
           {/* Text — below image on mobile, left on desktop */}
           <div className="order-2 lg:order-1 flex flex-col gap-6">
             {/* Tag */}
-            <div className="inline-flex items-center gap-2 self-start rounded-full bg-trust-green-pale px-4 py-1.5">
+            <div className="inline-flex items-center gap-2 self-start rounded-full bg-linear-to-tr from-bg-trust-green-pale to-white px-4 py-1.5 border border-trust-green-light/30">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-trust-green opacity-60" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-trust-green" />
               </span>
               <span className="text-trust-green font-semibold text-xs sm:text-sm">
-                A Supriyo Roy Foundation Initiative
+                A Supriya Roy Foundation Initiative
               </span>
             </div>
 
@@ -83,10 +83,10 @@ export default function Hero() {
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </a>
               </Button>
-              <GetInvolvedDialog
+              {/* <GetInvolvedDialog
                 defaultTab="donate"
                 trigger={<Button variant="secondary">Donate</Button>}
-              />
+              /> */}
               <GetInvolvedDialog
                 defaultTab="join"
                 trigger={<Button variant="outline">Join Us</Button>}
