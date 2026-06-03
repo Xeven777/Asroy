@@ -10,7 +10,6 @@ import img7 from "@/assets/gallery/7.webp";
 import img8 from "@/assets/gallery/8.webp";
 import img9 from "@/assets/gallery/9.webp";
 
-
 const galleryImages = [
   { src: img1, alt: "Asroy Community moment 1" },
   { src: img2, alt: "Asroy Community moment 2" },

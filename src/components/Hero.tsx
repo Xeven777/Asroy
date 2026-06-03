@@ -27,7 +27,7 @@ export default function Hero() {
       className="bg-linear-to-b min-h-svh from-green-600/10 pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-28 lg:pb-24"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12">
-        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+        <div className="grid items-center lg:grid-cols-2">
           {/* Image — top on mobile, right on desktop */}
           <div className="order-1 lg:order-2">
             <div className="relative aspect-4/3 w-full overflow-hidden rounded-3xl shadow-xl ring-1 ring-black/5">
