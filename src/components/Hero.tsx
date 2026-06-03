@@ -22,10 +22,12 @@ const stats = [
 
 export default function Hero() {
   return (
-    <section id="home" className="bg-linear-to-b min-h-svh from-green-600/10 pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-28 lg:pb-24">
+    <section
+      id="home"
+      className="bg-linear-to-b min-h-svh from-green-600/10 pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-28 lg:pb-24"
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-
           {/* Image — top on mobile, right on desktop */}
           <div className="order-1 lg:order-2">
             <div className="relative aspect-4/3 w-full overflow-hidden rounded-3xl shadow-xl ring-1 ring-black/5">
@@ -37,7 +39,7 @@ export default function Hero() {
                   fill
                   sizes="(min-width: 1024px) 50vw, 100vw"
                   className="object-cover"
-                  priority={i === 0}
+                  priority
                   placeholder="blur"
                   style={{
                     animation: "hero-slide 20s linear infinite",
@@ -58,7 +60,7 @@ export default function Hero() {
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-trust-green" />
               </span>
               <span className="text-trust-green font-semibold text-xs sm:text-sm">
-                A Supriya Roy Foundation Initiative
+                A Supriya Roy Initiative
               </span>
             </div>
 
@@ -97,13 +99,16 @@ export default function Hero() {
             <div className="flex gap-8 md:gap-12 pt-2 border-t border-gray-100">
               {stats.map(({ value, label }) => (
                 <div key={label} className="pt-4">
-                  <p className="text-2xl font-extrabold text-trust-navy">{value}</p>
-                  <p className="mt-0.5 text-xs font-medium text-gray-500">{label}</p>
+                  <p className="text-2xl font-extrabold text-trust-navy">
+                    {value}
+                  </p>
+                  <p className="mt-0.5 text-xs font-medium text-gray-500">
+                    {label}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
-
         </div>
       </div>
     </section>

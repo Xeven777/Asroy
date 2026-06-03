@@ -76,7 +76,6 @@ export default function Team() {
                   src={person.image}
                   alt={person.name}
                   fill
-                  loading="lazy"
                   sizes="300px"
                   className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />

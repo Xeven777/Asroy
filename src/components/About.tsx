@@ -44,7 +44,6 @@ export default function About() {
                     alt={img.alt}
                     width={350}
                     height={300}
-                    loading="lazy"
                     className="object-cover size-full brightness-105 saturate-110 hover:scale-105 transition-transform duration-500"
                   />
                 </div>

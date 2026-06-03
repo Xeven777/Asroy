@@ -45,7 +45,6 @@ export default function Gallery() {
                 alt={img.alt}
                 width={400}
                 height={225}
-                loading="lazy"
                 className="object-cover size-full group-hover:scale-105 transition-transform duration-500"
               />
             </div>

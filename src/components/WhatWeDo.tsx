@@ -84,7 +84,6 @@ export default function WhatWeDo() {
                     alt={prog.imageAlt}
                     width={350}
                     height={300}
-                    loading="lazy"
                     className="object-cover size-full group-hover:scale-105 transition-all brightness-130 duration-500"
                   />
                   {/* Icon badge */}
