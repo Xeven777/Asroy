@@ -24,7 +24,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="bg-linear-to-b min-h-svh from-green-600/10 pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-28 lg:pb-24"
+      className="bg-linear-to-b min-h-svh from-green-600/10 pt-10 pb-16 sm:pb-20 lg:py-24"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12">
         <div className="grid items-center lg:grid-cols-2">
@@ -54,7 +54,7 @@ export default function Hero() {
           {/* Text — below image on mobile, left on desktop */}
           <div className="order-2 lg:order-1 flex flex-col gap-6">
             {/* Tag */}
-            <div className="inline-flex items-center gap-2 self-start rounded-full bg-linear-to-tr from-bg-trust-green-pale to-white px-4 py-1.5 border border-trust-green-light/30">
+            <div className="inline-flex items-center gap-2 mt-4 self-start rounded-full bg-linear-to-tr from-bg-trust-green-pale to-white px-4 py-1.5 border border-trust-green-light/30">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-trust-green opacity-60" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-trust-green" />

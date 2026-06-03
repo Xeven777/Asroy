@@ -149,8 +149,8 @@ export function DonateDetails() {
         </div>
 
         <p className="mt-3 text-[11px] leading-relaxed text-gray-500">
-          Branch: 5-5/1, B Gupta Road, PO-Khagrag, Dist-Murshidabad,
-          Berhampur 742103
+          Branch: 5-5/1, B Gupta Road, PO-Khagrag, Dist-Murshidabad, Berhampur
+          742103
         </p>
       </div>
 
@@ -159,16 +159,16 @@ export function DonateDetails() {
           Need help with the transfer or want an 80G receipt?
         </p>
         <p className="mt-1 text-xs leading-relaxed text-gray-600">
-          Reach out on WhatsApp — we&apos;ll guide you through the donation
-          and send you a confirmation.
+          Reach out on WhatsApp — we&apos;ll guide you through the donation and
+          send you a confirmation.
         </p>
-        <Button asChild variant="secondary" size="lg" className="mt-4 w-full">
-          <a
-            href={WHATSAPP_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <MessageCircle className="h-4 w-4 fill-white stroke-0" />
+        <Button
+          asChild
+          variant="secondary"
+          className="mt-4 md:w-full text-sm md:text-base"
+        >
+          <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+            <MessageCircle className="size-3 md:size-4 fill-white stroke-0" />
             Contact us on WhatsApp
           </a>
         </Button>
