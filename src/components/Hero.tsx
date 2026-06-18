@@ -24,7 +24,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="bg-linear-to-b min-h-svh from-green-600/10 pt-10 pb-16 sm:pb-20 lg:py-24"
+      className="bg-linear-to-b from-green-600/10 pt-10 pb-16 sm:pb-20 lg:py-24"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12">
         <div className="grid items-center lg:grid-cols-2">

@@ -1,8 +1,10 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import ServicesMarquee from "@/components/ServicesMarquee";
 import About from "@/components/About";
 import Certifications from "@/components/Certifications";
 import WhatWeDo from "@/components/WhatWeDo";
+import Services from "@/components/Services";
 import Gallery from "@/components/Gallery";
 import Team from "@/components/Team";
 import CTABanner from "@/components/CTABanner";
@@ -28,9 +30,11 @@ export default function Home() {
       </div>
       <Navbar />
       <Hero />
+      <ServicesMarquee />
       <About />
       <Certifications />
       <WhatWeDo />
+      <Services />
       <Gallery />
       <Team />
       <CTABanner />
