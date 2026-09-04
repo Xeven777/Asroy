@@ -9,6 +9,8 @@ import img6 from "@/assets/gallery/6.webp";
 import img7 from "@/assets/gallery/7.webp";
 import img8 from "@/assets/gallery/8.webp";
 import img9 from "@/assets/gallery/9.webp";
+import img10 from "@/assets/gallery/10.webp";
+import img11 from "@/assets/gallery/11.webp";
 
 const galleryImages = [
   { src: img1, alt: "Asroy Community moment 1" },
@@ -20,6 +22,8 @@ const galleryImages = [
   { src: img7, alt: "Asroy Community moment 7" },
   { src: img8, alt: "Asroy Community moment 8" },
   { src: img9, alt: "Asroy Community moment 9" },
+  { src: img10, alt: "Asroy Community moment 10" },
+  { src: img11, alt: "Asroy Community moment 11" },
 ];
 
 export default function Gallery() {
@@ -31,8 +35,6 @@ export default function Gallery() {
           title="Moments of Impact"
           subtitle="Real stories, real change - glimpses from our work across communities"
         />
-
-        {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {galleryImages.map((img, i) => (
             <div
